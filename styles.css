@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav p {
+    color: white;
+    font-size: 20px;
+    margin: .5rem;
+    font-weight: 700;
+    position: fixed;
+}
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+    font-weight: 550;
+    margin-left: 8rem;
+    margin-top: 8px;
+    gap: 20px;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: royalblue;
+    font-size: 1rem;
+}
+nav .mainMenu li a:hover {
+    background: white;
+}
+
+nav .openMenu {
+    font-size: 1rem;
+    margin: 20px;
+    display: none;
+}
+
+nav .closeMenu {
+    display: none;
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 4rem;
+    color: royalblue;
+}
+
+.search {
+    width: 330px;
+    float: left;
+    margin-left: 100px;
+}
+
+.srch {
+    font-family: 'Times New Roman', Times, serif;
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid royalblue;
+    margin-top: 9px;
+    color: #000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: royalblue;
+    border: 2px solid royalblue;
+    margin-top: 9px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.srch:focus {
+    outline: none;
+}
+
+.content  {
+    margin-top: 5rem;
+    margin-left: 4rem;
+}
+
+.content h1 {
+    width: 50%;
+}
+
+.content span {
+    color: royalblue;
+}
+
+.hero-text p {
+    width: 80%;
+    margin-left: 4rem;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-weight: 400;
+    transition: .4s ease;
+}
+
+.hero {
+    display: flex;
+}
+
+.hero .cn {
+    width: 160px;
+    height: 40px;
+    background: royalblue;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 4rem;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    margin-top: 10px;
+}
+
+.hero .cn a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.cn:hover {
+    background-color: blue;
+}
+
+.img img {
+    margin-top: 5rem;
+    margin-right: 2rem;
+}
+
+
+@media(max-width:1000px){
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu li a {
+        color: royalblue;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    nav .openMenu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        font-size: .8rem;
+    }
+
+    nav .logo {
+        font-size: 15px;
+        margin: 0;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .search {
+        margin: 0;
+        margin-left: 1rem;
+    }
+
+    .content {
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    .content h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        display: grid;
+    }
+
+    .hero-text p {
+        width: 100%;
+        font-size: 15px;
+        margin: 0;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+
+    .hero .cn {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 5vh;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .cn a {
+        padding: .3rem;
+    }
+
+    .img img {
+        width: 100%;
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
