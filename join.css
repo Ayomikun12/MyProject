@@ -16,7 +16,7 @@ nav p {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background-color: #4070f4;
 }
 
 nav {
@@ -37,11 +37,12 @@ nav .mainMenu li a {
     padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
-    color: royalblue;
+    color: #fff;
     font-size: 1rem;
 }
 nav .mainMenu li a:hover {
     background: white;
+    color: #4070f4;
 }
 
 nav .openMenu {
@@ -60,7 +61,7 @@ nav .logo {
     cursor: pointer;
     margin-top: 10px;
     margin-left: 4rem;
-    color: royalblue;
+    color: #fff;
 }
 
 .search {
@@ -74,9 +75,9 @@ nav .logo {
     width: 200px;
     height: 40px;
     background: transparent;
-    border: 1px solid royalblue;
+    border: 1px solid #fff;
     margin-top: 9px;
-    color: #000;
+    color: #fff;
     border-right: none;
     font-size: 16px;
     float: left;
@@ -88,10 +89,10 @@ nav .logo {
 .btn {
     width: 100px;
     height: 40px;
-    background: royalblue;
-    border: 2px solid royalblue;
+    background: #fff;
+    border: 2px solid #fff;
     margin-top: 9px;
-    color: #fff;
+    color: royalblue;
     font-size: 15px;
     border-bottom-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -106,67 +107,114 @@ nav .logo {
     outline: none;
 }
 
-.content  {
-    margin-top: 5rem;
-    margin-left: 4rem;
+.contain {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.content h1 {
-    width: 50%;
+header {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
 }
 
-.content span {
-    color: royalblue;
-}
-
-.hero-text {
-    transition: 3s ease-out;
-    transition-delay: 3s;
-}
-
-.hero-text p {
-    width: 80%;
-    margin-left: 4rem;
-    font-size: 20px;
-    line-height: 1.8;
-    margin-top: 20px;
-    font-weight: 400;
-    /* transition: .4s ease; */
-}
-
-.hero {
-    display: flex;
-}
-
-.hero .cn {
-    width: 160px;
-    height: 40px;
-    background: royalblue;
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 4rem;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
+.container form {
     margin-top: 10px;
 }
 
-.hero .cn a {
-    text-decoration: none;
+form .field {
+    margin-bottom: 20px;
+}
+
+form .input-field {
+    position: relative;
+    height: 55px;
+    width: 100%;
+    background-color: red;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    padding: 0 15px;
+    border: 1px solid #d1d1d1;
+}
+
+.invalid input {
+    border-color: #d93025;
+}
+
+.input-field .show-hide {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #919191;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.field .error {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    color: #d93025;
+    font-size: 13px;
+    display: none;
+}
+
+.invalid .error {
+    display: flex;
+}
+
+.error .error-icon {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.create-password .error {
+    align-items: flex-start;
+}
+
+.create-password .error-icon {
+    margin-top: 4px;
+}
+
+.button {
+    margin: 25px 0 6px;
+}
+
+.button input {
     color: #fff;
-    /* transition: .3s ease; */
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.cn:hover {
-    background-color: blue;
+.button input:hover {
+    background-color: #0e4bf1;
 }
 
-.img img {
-    margin-top: 5rem;
-    margin-right: 2rem;
+.already span {
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
-
 
 @media(max-width:1000px){
     nav .mainMenu {
@@ -193,6 +241,8 @@ nav .logo {
         position: absolute;
         top: 10px;
         right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
     nav .openMenu {
@@ -200,6 +250,8 @@ nav .logo {
         position: absolute;
         top: 0;
         right: 20px;
+        color: #fff;
+        cursor: pointer;
     }
 
     nav .mainMenu li a:hover {
@@ -214,6 +266,11 @@ nav .logo {
         margin-top: 1rem;
     }
 
+    .srch {
+        border: 1px solid royalblue;
+        color: #000;
+    }
+
     .search {
         margin: 0;
         justify-content: center;
@@ -223,46 +280,9 @@ nav .logo {
         margin-left: 2rem;
     }
 
-    .content {
-        margin: 0;
-        margin-top: 5rem;
-    }
-
-    .content h1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        display: grid;
-    }
-
-    .hero-text p {
-        width: 100%;
-        font-size: 15px;
-        margin: 0;
-        text-align: center;
-        font-weight: 300;
-        margin-top: 1rem;
-    }
-
-    .hero .cn {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        height: 5vh;
-        font-size: 15px;
-        font-weight: bold;
-        margin-top: 1rem;
-    }
-
-    .cn a {
-        padding: .3rem;
-    }
-
-    .img img {
-        width: 100%;
-        margin: 0;
-        margin-top: 2rem;
+    .btn {
+        background: royalblue;
+        color: #fff;
+        border: 2px solid royalblue;
     }
 }
